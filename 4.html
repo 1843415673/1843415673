@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <input type="file" accept="image/*" capture='camera' multiple/>
+        <input type="file" accept="image/*" capture="camera">
+    </div>
+</body>
+<script>
+    var u = navigator.userAgent, app = navigator.appVersion;
+    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1; //android终端或者uc浏览器
+    if(isAndroid){
+        $(":file").attr('capture','camera');
+    }
+</script>
+</html>
